@@ -279,13 +279,13 @@ foreach my $file (@lst_files) {
 	    $xkb_layout_warp_effect{help}{$item} = $help ;
 	}
 	elsif ($mode eq 'variant') {
-	    my ($item, $layout, $help) = ( /([\-\w]+)(?:\s*(\w+):)?\s+(.*)/ ) ; #))
+	    my ($item, $layout, $help) = ( /([\-\w]+)(?:\s*([\w-]+):)?\s+(.*)/ ) ; #))
 	    $layout = '__all__' unless defined $layout ;
 	    push @{$variant_rules{$layout}{choice}}, $item ;
 	    $variant_rules{$layout}{help}{$item} = $help ;
 	}
 	elsif ( $mode eq 'option' and /:/ ) {
-	    my ($group, $option, $help) = (/([\w\-]+):(\w+)\s+(.*)/) ;
+	    my ($group, $option, $help) = (/([\w\-]+):([\w-]+)\s+(.*)/) ;
 	    $xkb_model_elt{$group} = { type => 'leaf', value_type => 'enum' }
 	      unless defined  $xkb_model_elt{$group} ;
 	    push @{ $xkb_model_elt{$group}{choice} }, $option ;
