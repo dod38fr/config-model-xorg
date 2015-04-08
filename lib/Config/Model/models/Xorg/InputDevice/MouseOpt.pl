@@ -1,45 +1,46 @@
 [
-          {
-            'name' => 'Xorg::InputDevice::MouseOpt',
-            'element' => [
-                           'Device',
-                           {
-                             'value_type' => 'uniline',
-                             'type' => 'leaf'
-                           },
-                           'Protocol',
-                           {
-                             'value_type' => 'enum',
-                             'type' => 'leaf',
-                             'choice' => [
-                                           'auto',
-                                           'PS/2',
-                                           'ImPS/2',
-                                           'IntelliMouse'
-                                         ]
-                           },
-                           'Emulate3Buttons',
-                           {
-                             'value_type' => 'boolean',
-                             'upstream_default' => 0,
-                             'type' => 'leaf'
-                           },
-                           'ZAxisMapping',
-                           {
-                             'value_type' => 'uniline',
-                             'type' => 'leaf'
-                           },
-                           'SendCoreEvents',
-                           {
-                             'value_type' => 'boolean',
-                             'type' => 'leaf'
-                           },
-                           'Buttons',
-                           {
-                             'value_type' => 'uniline',
-                             'type' => 'leaf'
-                           }
-                         ]
-          }
-        ]
+  {
+    'element' => [
+      'Device',
+      {
+        'type' => 'leaf',
+        'value_type' => 'uniline'
+      },
+      'Protocol',
+      {
+        'choice' => [
+          'auto',
+          'PS/2',
+          'ImPS/2',
+          'IntelliMouse'
+        ],
+        'type' => 'leaf',
+        'value_type' => 'enum'
+      },
+      'Emulate3Buttons',
+      {
+        'type' => 'leaf',
+        'upstream_default' => 0,
+        'value_type' => 'boolean'
+      },
+      'ZAxisMapping',
+      {
+        'type' => 'leaf',
+        'value_type' => 'uniline'
+      },
+      'SendCoreEvents',
+      {
+        'type' => 'leaf',
+        'value_type' => 'boolean'
+      },
+      'Buttons',
+      {
+        'type' => 'leaf',
+        'value_type' => 'uniline'
+      }
+    ],
+    'name' => 'Xorg::InputDevice::MouseOpt'
+  }
+]
 ;
+

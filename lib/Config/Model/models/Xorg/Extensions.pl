@@ -1,13 +1,14 @@
 [
-          {
-            'name' => 'Xorg::Extensions',
-            'element' => [
-                           'Option',
-                           {
-                             'type' => 'node',
-                             'config_class_name' => 'Xorg::Extensions::Option'
-                           }
-                         ]
-          }
-        ]
+  {
+    'element' => [
+      'Option',
+      {
+        'config_class_name' => 'Xorg::Extensions::Option',
+        'type' => 'node'
+      }
+    ],
+    'name' => 'Xorg::Extensions'
+  }
+]
 ;
+

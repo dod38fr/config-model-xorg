@@ -1,17 +1,18 @@
 [
-          {
-            'name' => 'Xorg::Extensions::Option',
-            'element' => [
-                           'Composite',
-                           {
-                             'value_type' => 'enum',
-                             'type' => 'leaf',
-                             'choice' => [
-                                           'Disable',
-                                           'Enable'
-                                         ]
-                           }
-                         ]
-          }
-        ]
+  {
+    'element' => [
+      'Composite',
+      {
+        'choice' => [
+          'Disable',
+          'Enable'
+        ],
+        'type' => 'leaf',
+        'value_type' => 'enum'
+      }
+    ],
+    'name' => 'Xorg::Extensions::Option'
+  }
+]
 ;
+

@@ -1,9 +1,10 @@
 [
-          {
-            'name' => 'Xorg::Device::Ati',
-            'include' => [
-                           'Xorg::Device::Radeon'
-                         ]
-          }
-        ]
+  {
+    'include' => [
+      'Xorg::Device::Radeon'
+    ],
+    'name' => 'Xorg::Device::Ati'
+  }
+]
 ;
+

@@ -1,61 +1,62 @@
 [
-          {
-            'name' => 'Xorg::Monitor::Option',
-            'element' => [
-                           'DPMS',
-                           {
-                             'value_type' => 'boolean',
-                             'type' => 'leaf'
-                           },
-                           'SyncOnGreen',
-                           {
-                             'value_type' => 'boolean',
-                             'type' => 'leaf'
-                           },
-                           'PreferredMode',
-                           {
-                             'value_type' => 'uniline',
-                             'type' => 'leaf',
-                             'description' => 'This optional entry specifies a mode to be marked as the preferred initial mode of the monitor. (RandR 1.2-supporting drivers only).
+  {
+    'element' => [
+      'DPMS',
+      {
+        'type' => 'leaf',
+        'value_type' => 'boolean'
+      },
+      'SyncOnGreen',
+      {
+        'type' => 'leaf',
+        'value_type' => 'boolean'
+      },
+      'PreferredMode',
+      {
+        'description' => 'This optional entry specifies a mode to be marked as the preferred initial mode of the monitor. (RandR 1.2-supporting drivers only).
 
-FIXME: use available Modes + vesa standard'
-                           },
-                           'LeftOf',
-                           {
-                             'value_type' => 'uniline',
-                             'type' => 'leaf',
-                             'description' => 'This optional entry specifies that the monitor should be positioned to the left of the output (not monitor) of the given name. (RandR 1.2-supporting drivers only)'
-                           },
-                           'RightOf',
-                           {
-                             'value_type' => 'uniline',
-                             'type' => 'leaf',
-                             'description' => 'This optional entry specifies that the monitor should be positioned to the right of the output (not monitor) of the given name. (RandR 1.2-supporting drivers only)'
-                           },
-                           'Above',
-                           {
-                             'value_type' => 'uniline',
-                             'type' => 'leaf',
-                             'description' => 'This optional entry specifies that the monitor should be positioned above the output (not monitor) of the given name. (RandR 1.2-supporting drivers only)'
-                           },
-                           'Below',
-                           {
-                             'value_type' => 'uniline',
-                             'type' => 'leaf',
-                             'description' => 'This optional entry specifies that the monitor should be positioned below the output (not monitor) of the given name. (RandR 1.2-supporting drivers only)'
-                           },
-                           'Ignore',
-                           {
-                             'value_type' => 'enum',
-                             'upstream_default' => 'false',
-                             'type' => 'leaf',
-                             'description' => 'This optional entry specifies whether the monitor should be turned on at startup. By default, the server will attempt to enable all connected monitors. (RandR 1.2-supporting drivers only)',
-                             'choice' => [
-                                           'false',
-                                           'true'
-                                         ]
-                           }
-                         ]
-          }
-        ]
+FIXME: use available Modes + vesa standard',
+        'type' => 'leaf',
+        'value_type' => 'uniline'
+      },
+      'LeftOf',
+      {
+        'description' => 'This optional entry specifies that the monitor should be positioned to the left of the output (not monitor) of the given name. (RandR 1.2-supporting drivers only)',
+        'type' => 'leaf',
+        'value_type' => 'uniline'
+      },
+      'RightOf',
+      {
+        'description' => 'This optional entry specifies that the monitor should be positioned to the right of the output (not monitor) of the given name. (RandR 1.2-supporting drivers only)',
+        'type' => 'leaf',
+        'value_type' => 'uniline'
+      },
+      'Above',
+      {
+        'description' => 'This optional entry specifies that the monitor should be positioned above the output (not monitor) of the given name. (RandR 1.2-supporting drivers only)',
+        'type' => 'leaf',
+        'value_type' => 'uniline'
+      },
+      'Below',
+      {
+        'description' => 'This optional entry specifies that the monitor should be positioned below the output (not monitor) of the given name. (RandR 1.2-supporting drivers only)',
+        'type' => 'leaf',
+        'value_type' => 'uniline'
+      },
+      'Ignore',
+      {
+        'choice' => [
+          'false',
+          'true'
+        ],
+        'description' => 'This optional entry specifies whether the monitor should be turned on at startup. By default, the server will attempt to enable all connected monitors. (RandR 1.2-supporting drivers only)',
+        'type' => 'leaf',
+        'upstream_default' => 'false',
+        'value_type' => 'enum'
+      }
+    ],
+    'name' => 'Xorg::Monitor::Option'
+  }
+]
 ;
+

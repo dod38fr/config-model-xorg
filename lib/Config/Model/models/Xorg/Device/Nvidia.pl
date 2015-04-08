@@ -1,25 +1,26 @@
 [
-          {
-            'name' => 'Xorg::Device::Nvidia',
-            'element' => [
-                           'TwinView',
-                           {
-                             'value_type' => 'boolean',
-                             'upstream_default' => 0,
-                             'type' => 'leaf'
-                           },
-                           'MetaModes',
-                           {
-                             'value_type' => 'uniline',
-                             'type' => 'leaf',
-                             'description' => 'Incomplete model. TBD'
-                           },
-                           'CrtcNumber',
-                           {
-                             'value_type' => 'integer',
-                             'type' => 'leaf'
-                           }
-                         ]
-          }
-        ]
+  {
+    'element' => [
+      'TwinView',
+      {
+        'type' => 'leaf',
+        'upstream_default' => 0,
+        'value_type' => 'boolean'
+      },
+      'MetaModes',
+      {
+        'description' => 'Incomplete model. TBD',
+        'type' => 'leaf',
+        'value_type' => 'uniline'
+      },
+      'CrtcNumber',
+      {
+        'type' => 'leaf',
+        'value_type' => 'integer'
+      }
+    ],
+    'name' => 'Xorg::Device::Nvidia'
+  }
+]
 ;
+
