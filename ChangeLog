@@ -1,3 +1,10 @@
+2015-11-07  Dominique Dumont  <domi.dumont@free.fr> 1.107
+
+    * All models: removed experience param. Reformatted by
+      config-model-edit
+    * Build.PL: fix parsing of keyboard file
+    * depends on Config::Model 2.069, App::Cme
+
 2011-11-07  Dominique Dumont  <domi.dumont@free.fr> 1.106
 
     * Config/Model/Backend/Xorg.pm: updated doc (removed misleading
