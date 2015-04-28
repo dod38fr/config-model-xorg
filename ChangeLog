@@ -1,4 +1,8 @@
-2015-11-07  Dominique Dumont  <domi.dumont@free.fr> 1.107
+2015-04-28  Dominique Dumont  <domi.dumont@free.fr> 1.108
+
+    * updated fallback_model to fix test failure on BSD
+
+2015-04-26  Dominique Dumont  <domi.dumont@free.fr> 1.107
 
     * All models: removed experience param. Reformatted by
       config-model-edit
