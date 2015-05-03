@@ -121,7 +121,7 @@
         'type' => 'node'
       }
     ],
-    'include' => [
+    'include_backend' => [
       'Xorg::ConfigDir'
     ],
     'name' => 'Xorg'
