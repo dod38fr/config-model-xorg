@@ -1,3 +1,9 @@
+2015-05-03  Dominique Dumont  <domi.dumont@free.fr> 1.109
+
+  * use new include_backend parameter to include in Xorg.pl
+    the read/write spec written by Build.PL in Xorg::ConfigDir
+  * Depends on Config::Model 2.070
+
 2015-04-28  Dominique Dumont  <domi.dumont@free.fr> 1.108
 
     * updated fallback_model to fix test failure on BSD
