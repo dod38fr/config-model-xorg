@@ -1,12 +1,14 @@
 package Config::Model::Backend::Xorg ;
+
+
 use Any::Moose ;
 use Carp ;
 use Log::Log4perl qw(get_logger :levels);
- 
+
 extends 'Config::Model::Backend::Any';
 
-with 'Config::Model::Backend::Xorg::Read'; 
-with 'Config::Model::Backend::Xorg::Write'; 
+with 'Config::Model::Backend::Xorg::Read';
+with 'Config::Model::Backend::Xorg::Write';
 
 my $logger = get_logger("Backend::Xorg") ;
 
