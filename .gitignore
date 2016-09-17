@@ -2,4 +2,9 @@ Config-Model-*
 .build/
 wr_root/
 *~
-
+Build
+MYMETA*
+_build/
+lib/Config/Model/models/**/*.pod
+lib/Config/Model/models/Xorg/ConfigDir.pl
+lib/Config/Model/models/Xorg/InputDevice/KeyboardOptModel/
