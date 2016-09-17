@@ -182,7 +182,7 @@ sub parse_mode_line {
     # force @v content to be numerical instead of strings
     my @v = map { 0 + $_ } splice @m,0,9 ;
 
-    my $load = "Mode:$mode DotClock=$v[0] ";
+    my $load = qq!Mode:"$mode" DotClock=$v[0] !;
     $load .= "HTimings disp=$v[1] syncstart=$v[2] syncend=$v[3] total=$v[4] - ";
     $load .= "VTimings disp=$v[5] syncstart=$v[6] syncend=$v[7] total=$v[8] - ";
 
@@ -196,8 +196,8 @@ sub parse_mode_line {
 sub parse_modes_list {
     my ($obj, $trash, $line_nb, @modes) = @_ ;
 
-    my $load = "Modes=".join(',',@modes);
-    $logger->debug( "parse_modes_list: ($line_nb))load '$load'");
+    my $load = 'Modes="'.join('","',@modes).'"';
+    $logger->debug( "parse_modes_list: ($line_nb)) load '$load'");
     $obj->load($load) ;
 }
 
@@ -209,7 +209,7 @@ sub parse_layout_screen {
     my $load;
 
     if ($obj->config_class_name eq 'Xorg::Device') {
-	$load = "Screen=$value";
+        $load = "Screen=$value";
     }
     else {
 	my ($num, $screen_id);
