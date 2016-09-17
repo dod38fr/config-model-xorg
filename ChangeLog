@@ -1,3 +1,7 @@
+2016-09-17  Dominique Dumont  <domi.dumont@free.fr> 1.110
+
+  * quotes values arguments when calling load (RT #117849)
+
 2015-05-03  Dominique Dumont  <domi.dumont@free.fr> 1.109
 
   * use new include_backend parameter to include in Xorg.pl
