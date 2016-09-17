@@ -22,6 +22,7 @@ use Data::Dumper ;
 use File::Copy ; # used when Xorg is not installed
 use File::Path ;
 use Config ;
+use Config::Model::Utils::GenClassPod;
 
 require 5.008 ;
 
@@ -362,12 +363,7 @@ print "\nStage 3: generate Keyboart option rules\n";
 
 generate($build, $out_file, $kbd_option_rules_class,'  ') ;
 
-print "\n";
-
-$build->add_build_element('pl');
-$build->create_build_script;
-
-exit ;
+goto RUN_BUILD;
 
 FALLBACK:
 
@@ -389,5 +385,12 @@ mkpath($kopt_dir, 1, 0755) unless -d $kopt_dir;
 my_copy($build,"fallback_models/KeyboardOptRules.pl",
 	"$kopt_dir/KeyboardOptRules.pl");
 
+RUN_BUILD:
+
+print "Generating pod doc from all models\n";
+gen_class_pod();
+
+print "Creating Build script\n";
 $build->add_build_element('pl');
 $build->create_build_script;
+
