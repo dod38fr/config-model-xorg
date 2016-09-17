@@ -3,9 +3,6 @@ package Config::Model::Xorg ;
 
 # dummy package so CPAN can collect information regarding this module
 
-# use vars qw($VERSION) ;
-
-# $VERSION = '1.104' ;
 
 =head1 NAME
 
