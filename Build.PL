@@ -62,8 +62,23 @@ sub my_copy {
     $builder->add_to_cleanup($to) ;
 }
 
+# check that pod docs are up-to-date this is redundant with work done by
+# dzil. But this enable to re-build the docs downstream.
+# Use $^X in there as requested in
+# https://rt.cpan.org/Public/Bug/Display.html?id=74891
+my $class = Module::Build->subclass(
+    class => "Module::Build::Custom",
+    code => <<'SUBCLASS' );
+sub ACTION_build {
+    my $self = shift;
+    # regenerate pod documentation
+    system ($^X, '-MConfig::Model::Utils::GenClassPod', '-e','gen_class_pod();') == 0
+                    or die "gen-class-pod failed: $?";
+    $self->SUPER::ACTION_build;
+}
+SUBCLASS
 
-my $build = Module::Build->new
+my $build = $class->new
   (
    module_name   => 'Config::Model::Xorg',
    license       => 'lgpl',
