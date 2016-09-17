@@ -1,4 +1,6 @@
-2016-09-17  Dominique Dumont  <domi.dumont@free.fr> 1.110
+{{$NEXT}}
+
+1.111 2016-09-17
 
   * quotes values arguments when calling load (RT #117849)
 
