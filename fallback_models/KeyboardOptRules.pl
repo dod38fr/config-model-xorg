@@ -1544,7 +1544,8 @@
               {
                 'follow' => '- XkbRules',
                 'type' => 'warped_node',
-                'rules' => {
+                warp => {
+                    'rules' => {
                              'xorg' => {
                                          'config_class_name' => 'Xorg::InputDevice::KeyboardOptModel::Xorg'
                                        },
@@ -1557,7 +1558,8 @@
                              'xorg-it' => {
                                             'config_class_name' => 'Xorg::InputDevice::KeyboardOptModel::Xorg-it'
                                           }
-                           }
+                         }
+                }
               },
               'XkbRules',
               {

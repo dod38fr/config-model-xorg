@@ -190,10 +190,12 @@ my $xkb_variant_elt = {
 
 # needs to be refined ...
 my $xkb_options_elt = {
-		       type => 'warped_node',
-		       warp => { follow => { r => '- XkbRules' }},
-		       rules => [ ] ,
-		      };
+    type => 'warped_node',
+    warp => {
+        follow => { r => '- XkbRules' },
+        rules => [ ] ,
+    },
+};
 
 # use a list to ensure the order of the options
 my @kbd_option_elt 
@@ -335,7 +337,7 @@ foreach my $file (@lst_files) {
     my $class_name
       = 'Xorg::InputDevice::KeyboardOptModel::'. ucfirst($rules_name) ;
 
-    push @{$xkb_options_elt->{rules} } ,
+    push @{$xkb_options_elt->{warp}{rules} } ,
          $warp_rule => { config_class_name => $class_name } ;
 
     push @{$xkb_model_elt->{warp}{rules}},   $warp_rule, \%xkb_model_warp_effect ; 
