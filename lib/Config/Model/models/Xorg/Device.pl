@@ -97,6 +97,11 @@ PCI:bus:device:function (e.g., \x{201c}PCI:1:0:0\x{201d} might be appropriate fo
             }
           ]
         }
+      },
+      'VendorName',
+      {
+        'type' => 'leaf',
+        'value_type' => 'uniline'
       }
     ],
     'name' => 'Xorg::Device'
