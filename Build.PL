@@ -84,6 +84,10 @@ my $build = $class->new
    license       => 'lgpl',
    dist_author   => "Dominique Dumont (ddumont at cpan dot org)",
    dist_abstract => "Xorg configuration editor and validator",
+   # to use gen_class_pod above
+   configure_requires => {
+       'Config::Model' => '2.084',
+   },
 
 ##{ $plugin->get_prereqs ##}
 
