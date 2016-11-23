@@ -8,3 +8,4 @@ _build/
 lib/Config/Model/models/**/*.pod
 lib/Config/Model/models/Xorg/ConfigDir.pl
 lib/Config/Model/models/Xorg/InputDevice/KeyboardOptModel/
+lib/Config/Model/models/Xorg/InputDevice/KeyboardOptRules.pl
