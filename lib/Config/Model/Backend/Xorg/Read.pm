@@ -1,6 +1,6 @@
 package Config::Model::Backend::Xorg::Read ;
 
-use Any::Moose 'Role';
+use Mouse::Role;
 
 use Carp ;
 use IO::File ;

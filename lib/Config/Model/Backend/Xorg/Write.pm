@@ -1,7 +1,7 @@
 
 package Config::Model::Backend::Xorg::Write ;
 
-use Any::Moose 'Role' ;
+use Mouse::Role ;
 
 use Carp ;
 use IO::File ;

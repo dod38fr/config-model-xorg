@@ -1,7 +1,7 @@
 package Config::Model::Backend::Xorg ;
 
 
-use Any::Moose ;
+use Mouse ;
 use Carp ;
 use Log::Log4perl qw(get_logger :levels);
 
@@ -75,8 +75,6 @@ sub write {
     return 1;
 }
 
-no Any::Moose ;
-__PACKAGE__->meta->make_immutable ;
 
 1;
 
