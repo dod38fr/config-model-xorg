@@ -1,5 +1,16 @@
 {{$NEXT}}
 
+1.112 2016-11-23
+
+  * removed obsolete config-edit-xorg, this is replaced
+    by cme edit xorg
+  * add missing VendorName param in Device
+  * fix deprecation warning about rules and follow
+    parameter
+  * use Mouse instead of Any::Moose (RT #118911)
+  * add configure_require on Config::Model 2.087 (RT #118912)
+    Many thanks to Slaven Rezic for the report and solution
+
 1.111 2016-09-17
 
   * quotes values arguments when calling load (RT #117849)
