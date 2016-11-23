@@ -206,16 +206,18 @@
               This  optional  entry  allows  the "black" colour to be
               specified.  This is only supported  at  depth  1.   The
               default is black.',
-        'follow' => {
-          'f1' => '- Depth'
-        },
-        'rules' => [
-          '$f1 eq \'1\'',
-          {
-            'config_class_name' => 'Xorg::Screen::Display::Color'
-          }
-        ],
-        'type' => 'warped_node'
+        'type' => 'warped_node',
+        'warp' => {
+          'follow' => {
+            'f1' => '- Depth'
+          },
+          'rules' => [
+            '$f1 eq \'1\'',
+            {
+              'config_class_name' => 'Xorg::Screen::Display::Color'
+            }
+          ]
+        }
       },
       'White',
       {
@@ -223,16 +225,18 @@
               This  optional  entry  allows  the "black" colour to be
               specified.  This is only supported  at  depth  1.   The
               default is black.',
-        'follow' => {
-          'f1' => '- Depth'
-        },
-        'rules' => [
-          '$f1 eq \'1\'',
-          {
-            'config_class_name' => 'Xorg::Screen::Display::Color'
-          }
-        ],
-        'type' => 'warped_node'
+        'type' => 'warped_node',
+        'warp' => {
+          'follow' => {
+            'f1' => '- Depth'
+          },
+          'rules' => [
+            '$f1 eq \'1\'',
+            {
+              'config_class_name' => 'Xorg::Screen::Display::Color'
+            }
+          ]
+        }
       }
     ],
     'name' => 'Xorg::Screen::Display'

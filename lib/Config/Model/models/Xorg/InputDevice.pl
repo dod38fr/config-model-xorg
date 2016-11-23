@@ -29,20 +29,22 @@
       },
       'Option',
       {
-        'follow' => {
-          'f1' => '- Driver'
-        },
-        'rules' => [
-          '$f1 eq \'kbd\'',
-          {
-            'config_class_name' => 'Xorg::InputDevice::KeyboardOpt'
+        'type' => 'warped_node',
+        'warp' => {
+          'follow' => {
+            'f1' => '- Driver'
           },
-          '$f1 eq \'mouse\'',
-          {
-            'config_class_name' => 'Xorg::InputDevice::MouseOpt'
-          }
-        ],
-        'type' => 'warped_node'
+          'rules' => [
+            '$f1 eq \'kbd\'',
+            {
+              'config_class_name' => 'Xorg::InputDevice::KeyboardOpt'
+            },
+            '$f1 eq \'mouse\'',
+            {
+              'config_class_name' => 'Xorg::InputDevice::MouseOpt'
+            }
+          ]
+        }
       }
     ],
     'name' => 'Xorg::InputDevice'

@@ -69,32 +69,34 @@ PCI:bus:device:function (e.g., \x{201c}PCI:1:0:0\x{201d} might be appropriate fo
       'Option',
       {
         'description' => 'Option flags may be specified in the Device sections. These include driver-specific options and driver-independent options.',
-        'follow' => {
-          'f1' => '- Driver'
-        },
-        'rules' => [
-          '$f1 eq \'radeon\'',
-          {
-            'config_class_name' => 'Xorg::Device::Radeon'
+        'type' => 'warped_node',
+        'warp' => {
+          'follow' => {
+            'f1' => '- Driver'
           },
-          '$f1 eq \'vesa\'',
-          {
-            'config_class_name' => 'Xorg::Device::Vesa'
-          },
-          '$f1 eq \'nvidia\'',
-          {
-            'config_class_name' => 'Xorg::Device::Nvidia'
-          },
-          '$f1 eq \'fglrx\'',
-          {
-            'config_class_name' => 'Xorg::Device::Fglrx'
-          },
-          '$f1 eq \'ati\'',
-          {
-            'config_class_name' => 'Xorg::Device::Ati'
-          }
-        ],
-        'type' => 'warped_node'
+          'rules' => [
+            '$f1 eq \'radeon\'',
+            {
+              'config_class_name' => 'Xorg::Device::Radeon'
+            },
+            '$f1 eq \'vesa\'',
+            {
+              'config_class_name' => 'Xorg::Device::Vesa'
+            },
+            '$f1 eq \'nvidia\'',
+            {
+              'config_class_name' => 'Xorg::Device::Nvidia'
+            },
+            '$f1 eq \'fglrx\'',
+            {
+              'config_class_name' => 'Xorg::Device::Fglrx'
+            },
+            '$f1 eq \'ati\'',
+            {
+              'config_class_name' => 'Xorg::Device::Ati'
+            }
+          ]
+        }
       }
     ],
     'name' => 'Xorg::Device'

@@ -86,7 +86,7 @@ my $build = $class->new
    dist_abstract => "Xorg configuration editor and validator",
    # to use gen_class_pod above
    configure_requires => {
-       'Config::Model' => '2.084',
+       'Config::Model' => '2.087',
    },
 
 ##{ $plugin->get_prereqs ##}
@@ -191,7 +191,7 @@ my $xkb_variant_elt = {
 # needs to be refined ...
 my $xkb_options_elt = {
 		       type => 'warped_node',
-		       follow => { r => '- XkbRules' },
+		       warp => { follow => { r => '- XkbRules' }},
 		       rules => [ ] ,
 		      };
 
