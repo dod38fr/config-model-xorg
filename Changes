@@ -1,5 +1,10 @@
 {{$NEXT}}
 
+1.113 2016-11-24
+
+  * add in the correct place (in dist.ini) the
+    configure_require on Config::Model 2.087 (RT #118912)
+
 1.112 2016-11-23
 
   * removed obsolete config-edit-xorg, this is replaced
