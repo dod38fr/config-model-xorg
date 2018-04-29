@@ -12,10 +12,7 @@ with 'Config::Model::Backend::Xorg::Write';
 
 my $logger = get_logger("Backend::Xorg") ;
 
-sub suffix { return 'conf' ; }
-
 sub annotation { return 0 ;}
-
 
 sub read {
     my $self = shift ;
