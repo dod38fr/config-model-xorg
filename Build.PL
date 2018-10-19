@@ -89,7 +89,7 @@ my $build = $class->new
 
     meta_merge => {
         resources => {
-            homepage => 'http://config-model.wiki.sourceforge.net',
+            homepage => 'https://github.com/dod38fr/config-model/wiki',
             MailingList =>
               'https://lists.sourceforge.net/lists/listinfo/config-model-users',
             repository =>
