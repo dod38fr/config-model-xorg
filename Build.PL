@@ -93,7 +93,7 @@ my $build = $class->new
             MailingList =>
               'https://lists.sourceforge.net/lists/listinfo/config-model-users',
             repository =>
-              'http://config-model.hg.sourceforge.net:8000/hgroot/config-model/config-model',
+              'https://github.com/dod38fr/config-model-xorg',
         },
     },
 
