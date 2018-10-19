@@ -125,14 +125,12 @@ my $xorg_config_file_model = [
         name => 'Xorg::ConfigDir',
         class_description => "Class used to tune location of xorg.conf which is not always in /etc/X11.",
         generated_by => $generator ,
-        read_config => [ 
-            { 
-                backend => 'Xorg',
-                file => 'xorg.conf',    
-                config_dir => $etc_xorg_dir ,
-                auto_create => 1,
-            }
-        ] ,
+        rw_config => {
+            backend => 'Xorg',
+            file => 'xorg.conf',
+            config_dir => $etc_xorg_dir ,
+            auto_create => 1,
+        }
     ]
 ] ;
 
