@@ -30,11 +30,16 @@ sub read {
     return 0 unless defined $args{io_handle} ; # no file to read
     my $check = $args{check} || 'yes' ;
 
-    my @lines = $args{io_handle}->getlines ;
+    my @lines ;
 
     my $idx = 0 ;
     # store also input line number
-    map {s/#.*$//; s/^\s*//; s/\s+$//; $_ = [ "line ".$idx++ ,$_ ]} @lines ;
+    foreach my $line ($args{file_path}->lines_utf8) {
+        $line =~ s/#.*$//;
+        $line =~ s/^\s*//;
+        $line =~ s/\s+$//;
+        push @lines, [ "line ".$idx++ ,$line ]
+    }
     my @raw_xorg_conf = grep { $_->[1] !~ /^\s*$/ ;} @lines;
     chomp @raw_xorg_conf ;
 
@@ -61,14 +66,9 @@ sub write {
     # io_handle  => $io           # IO::File object
     # check      => yes|no|skip
 
-    my $ioh = $args{io_handle} ;
-    my $node = $args{object} ;
-
-    croak "Undefined file handle to write" unless defined $ioh;
-
     my $a_ref = write_all( $args{object} ) ;
-    $ioh->say( map {"$_\n"} @$a_ref )  ;
- 
+    $args{file_path}->spew_utf8( map {"$_\n"} @$a_ref )  ;
+
     return 1;
 }
 
