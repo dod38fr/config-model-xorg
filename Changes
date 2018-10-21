@@ -1,5 +1,10 @@
 {{$NEXT}}
 
+1.115 2018-10-21
+
+  * dist.ini: use AutoPrereq
+  * adds build dependency on Config::Model::Tester 3.006
+
 1.114 2018-10-19
 
   * dist.ini: require Config::Model 2.123
