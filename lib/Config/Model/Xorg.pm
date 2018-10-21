@@ -1,6 +1,9 @@
 
 package Config::Model::Xorg ;
 
+use 5.10.1;
+use Config::Model 2.123;
+
 # dummy package so CPAN can collect information regarding this module
 
 
